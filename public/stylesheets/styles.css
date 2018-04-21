@@ -1,0 +1,115 @@
+@charset "ISO-8859-1";
+p{
+	color:white;
+}
+h1, h3{
+	font-weight: medium;
+	color: white;
+}
+body{
+	background-color: #191919;
+	font-weight: light;
+    font-family: 'Montserrat', sans-serif;
+}
+img{
+	max-width: 100%;
+	border: 2px white solid;
+}
+.navbar-brand{
+	font-size: 20px;
+	font-family: 'Planet N', arial;
+	text-shadow: 4px 4px 4px #aaa;
+	color: white;
+}
+
+.rating{
+	font-weight: bold;
+}
+
+.release{
+	font-weight: bold;
+}
+
+.eachMovie{
+	background-color: #191919;
+	color: white;
+}
+.btnModal{
+	background-color: #191919;
+	margin-bottom: 35px;
+	border: black;
+}
+.modal-content{
+	color: black;
+	padding: 2px;
+	min-width: 656px;
+}
+.moviePosterInModal{
+	padding: 12px;
+}
+.movieName{
+	font-size: 30px;
+	font-weight: bold;
+}
+.btn-primary{
+	margin: 5px;
+	padding: 5px;
+	background: transparent;
+	color: #5EADFF;
+	border: 1px solid #5EADFF; 
+}
+#movieGenreLabel{
+	color: white;
+}
+a{
+	color:white;
+}
+a:visited{
+	color: white;
+}
+a:hover{
+	color: #aaaaaa;
+}
+a:active{
+	color: #aaaaaa;
+}
+.footer{
+	margin-top:30px;
+	border-top: 1px solid white;
+	width: 100%;
+	bottom: 0;
+}
+.sendForm{
+	width: 60%;
+}
+textarea{
+	height: 250px;
+	width:50%;
+	border-radius: 10px;
+	border: none;
+	border-bottom: 2px solid #939393;
+	resize: none;
+}
+#inEmail{
+	width: 50%;
+	height: 30px;
+	border-radius: 8px;
+	border: none;
+	border-bottom: 2px solid #939393;
+}
+#inName{
+	width: 50%;
+	height: 30px;
+	border-radius: 8px;
+	border: none;
+	border-bottom: 2px solid #939393;
+}
+.sendForm p{
+	padding-top: 5px;
+}
+#Send{
+	border-radius: 8px;
+	width:15%;
+	height:30px;
+	border: none;
+}

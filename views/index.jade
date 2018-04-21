@@ -1,0 +1,120 @@
+doctype html
+html
+  head
+    title Movie App
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css')
+    // здесь css файл
+    // CUSTOM STYLES
+    link(rel='stylesheet', type='text/css', href='/stylesheets/styles.css')
+    // Google Fonts
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
+    link(href='http://allfont.ru/allfont.css?fonts=planet-n', rel='stylesheet', type='text/css')
+    // JQUERY
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    // CUSTOM JS
+    script(type='text/javascript', src='config.js')
+    script(type='text/javascript', src='scripts.js')
+  body
+    // 
+    // Navbar
+    // 
+    nav.navbar.navbar-inverse
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Main Page
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a.nowPlaying(href='#') Now Playing
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Genres
+                span.caret
+              ul.dropdown-menu
+                li
+                  a#action.action(href='#') Action
+                li
+                  a#adventure.adventure(href='#') Adventure
+                li
+                  a#animation.animation(href='#') Animation
+                li
+                  a#comedy.comedy(href='#') Comedy
+                li
+                  a#crime.crime(href='#') Crime
+                li
+                  a#drama.drama(href='#') Drama
+                li
+                  a#family.family(href='#') Family
+                li
+                  a#fantasy.fantasy(href='#') Fantasy
+                li
+                  a#history.history(href='#') History
+                li
+                  a#music.music(href='#') Music
+                li
+                  a#romance.romance(href='#') Romance
+                li
+                  a#scifi.scifi(href='#') Science Fiction
+                li
+                  a#thriller.thriller(href='#') Thriller
+          ul.nav.navbar-nav.navbar-right
+            form.navbar-form.navbar-right.searchForm
+              .form-group
+                input.form-control(type='text', placeholder='Search movies')
+              button.btn.btn-default(type='submit') Go
+        // /.navbar-collapse
+      // /.container-fluid
+    // Main Page Content
+    .mainPageContent(align='center')
+      h1#mainPage
+      #youtubelink
+        iframe(width='854', height='480', src='https://www.youtube.com/embed/jY6iOavoykQ?rel=0&showinfo=0', frameborder='0', allow='autoplay; encrypted-media')
+      #displayContent
+      // About and Contacts hyper links that display some text once you press on them
+      #about(style='visibility:collapse; position: fixed;')
+        p
+          | The purpose of this website is to provide its visitors with information about different kinds of movies.
+        p
+          | The movie search can either be done through the genre selection, or straight up from the search bar in the right upper corner.
+      #contacts(style='visibility:collapse; position: fixed;')
+        h3
+          b Emails
+        p savelyi.upokoinyi@mail.ru
+        p alex_darkstalker@yahoo.com
+        h3
+          b
+            | Phone number
+            h3
+          p 044 752 9144
+      // Alert Message
+      .footer
+        ul(align='left')
+          li
+            a(href='#About', onclick="document.getElementById('displayContent').innerHTML=document.getElementById('about').innerHTML;") About
+          li
+            a(href='#Contacts', onclick="document.getElementById('displayContent').innerHTML=document.getElementById('contacts').innerHTML;") Contacts
+          li
+            a(href='/contact') Contact Us
+        #alertMsg
+          .alert.info
+  
+    // Displaying the movies
+    .container
+      .row
+        .genreLabel
+          h1#movieGenreLabel
+        // I need the h1 to change accordingly depending on what was clicked.
+        #movie-grid
+          // Jquery get us the movie posters! Need a place to put the poster images
